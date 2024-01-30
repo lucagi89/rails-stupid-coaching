@@ -1,5 +1,4 @@
-<h3><%= params[:question]%></h3>
-<h3>- You</h3>
+<h3><h4><em>- You: </em></h4><%= params[:question]%></h3>
 <%if params[:question] == "I am going to work"%>
 <% @answer = "Great!"%>
 <%elsif params[:question].include?("?")%>
@@ -7,7 +6,6 @@
 <%else%>
 <% @answer = "I don't care, get dressed and go to work!"%>
 <%end%>
-<h3><%= @answer %></h3>
-<h3>- Your Coach</h3>
+<h3><h4><em>- Your Coach: </em></h4><%= @answer %></h3>
 
-<%= link_to "Ask another question", ask_path %>
+<p class="mt-5"><%= link_to "Ask another question", ask_path %></p>
